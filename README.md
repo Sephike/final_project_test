@@ -2,7 +2,7 @@
 UT McCombs Data Visualization Boot Camp Group Project
 
 ## Topic Selection
-In selecting a topic the team wanted to pick a dataset that represented a common interest amongst each team member.  To varying degrees, each team member is interested in the video game industry, which has many aspects to explore such as sales, genres, platforms, rankings and ratings.  In particular, the video game industry is on track to hit $138 billion in revenue in 2021 according to J. Clement.  With this much revenue, there is a wealth of data to be mined within the video game industry.  
+In selecting a topic, the team wanted to pick a dataset that represented a common interest amongst each team member.  To varying degrees, each team member is interested in the video game industry, which has many aspects to explore such as sales, genres, platforms, rankings, and ratings.  In particular, the video game industry is on track to hit $138 billion in revenue in 2021 according to J. Clement.  With this much revenue, there is a wealth of data to be mined within the video game industry.  
 
 ## Investigative Questions and Data Sources
 The investigating question is to determine the main drivers behind global video game sales.  The starting dataset was sourced from Kaggle with data representing over 55,000 video games sales from 2019.  Depending on the the output from the machine learning model, other follow up questions are listed.  
@@ -12,7 +12,7 @@ The investigating question is to determine the main drivers behind global video 
 3. What is the correlation between User Scores and the Critic Score by Genre? 
 4. What is the correlation between User Scores and the Critic Score by ESRB Rating? 
 
-## Methodogy and Technologies Used
+## Methodology and Technologies Used
 ### Data Environment and Technologies 
 1. GitBash 2.28.0 
 2. Jupyter Notebook 6.1.4 
@@ -26,10 +26,10 @@ The starting data set will be imported into Postgres using SQL.  The appropriate
 ### Data Exploration
 ✓ Takes in data in from the provisional
 database
-✓ Outputs label(s) for input data
+✓ Output label(s) for input data
 ✓ Simple statistical analysis
 
-### Analaysis using a Machine Learning Model
+### Analysis using a Machine Learning Model
 ✓ Description of data preprocessing
 ✓ Description of feature engineering and the feature selection, including the team's decision-making process
 ✓ Description of how data was split into training and testing sets
@@ -46,11 +46,10 @@ database
 
 ### Recommendations
 
-
 ## Reference List
 Alqunber, Abdulshaheed. (2019, April 12). Video games sales 2019. Kaggle. https://rb.gy/gtadhs
 
 Clement, J. (2021, January 29). Value of the global video games market 2012-2021. Statista. https://rb.gy/apmgqy  
 
 ### Team Communication Protocols
-The team will work virtually using the Zoom and Slack technologies.  The team is expected to use individual branches to their commit work to GitHub, where the project is warehoused.  The branches will be merged when the team meets to review each other's work.  
+The team will work virtually using the Zoom and Slack technologies.  The team is expected to use individual branches to their commit work to GitHub, where the project is warehoused.  The branches will be merged when the team meets to review each other's work.   
