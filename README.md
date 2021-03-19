@@ -1,6 +1,7 @@
 # final_project_test
 UT McCombs Data Visualization Boot Camp Group Project
 ![Pic 1](https://github.com/Sephike/predict_user_score/blob/x_role/Images/video_game_controllers.jpg)
+Image Source: Guinnessworldrecords<sup>3</sup>
 
 ## Topic Selection
 In selecting a topic, the team wanted to pick a dataset that represented a common interest amongst each team member.  To varying degrees, each team member is interested in the video game industry, which has many aspects to explore such as sales, genres, platforms, rankings, and ratings.  In particular, the video game industry is on track to hit $138 billion in revenue in 2021 according to J. Clement<sup>2</sup>.  With this much revenue, there is a wealth of data to be mined within the video game industry.  
