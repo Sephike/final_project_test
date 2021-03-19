@@ -7,7 +7,7 @@ Image Source: Guinnessworldrecords<sup>3</sup>
 In selecting a topic, the team wanted to pick a dataset that represented a common interest amongst each team member.  To varying degrees, each team member is interested in the video game industry, which has many aspects to explore such as sales, genres, platforms, rankings, and ratings.  In particular, the video game industry is on track to hit $138 billion in revenue in 2021 according to J. Clement<sup>2</sup>.  With this much revenue, there is a wealth of data to be mined within the video game industry.  
 
 ## Investigative Questions and Data Sources
-The investigating question is to determine the main drivers behind global video game sales.  The starting dataset was sourced from Kaggle<sup>1</sup> with data representing over 55,000 video games sales from 2019.  Depending on the the output from the machine learning model, other follow up questions are listed.  
+The investigating question is to determine the main drivers behind global video game sales.  The starting dataset was sourced from Kaggle<sup>1</sup> with data representing over 55,000 video games sales from 2019.  Depending on the output from the machine learning model, other follow up questions are listed.  
 
 1. What is the main drivers behind global sales?  Platform, Genre, ESRB Rating, User Score, Critic Score?
 2. Does the User Score predict higher global sales by Platform? 
@@ -23,7 +23,7 @@ The investigating question is to determine the main drivers behind global video 
 5. Pandas 1.1.4
 6. Python 3.7.7
 
-The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifially the Pandas library will be used to clean the dataset.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code maybe used to clean or compare python scripts or to update the markdown.  The final outputs will have an interactive display on Tableau Pupblic and communicated through Google Slides.
+The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code maybe used to clean or compare python scripts or to update the markdown.  The final outputs will have an interactive display on Tableau Public and communicated through Google Slides.
 
 ### Data Exploration
 ✓ Takes in data in from the provisional
