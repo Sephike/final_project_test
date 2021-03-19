@@ -11,11 +11,10 @@ A basic linear regression or logistic model will be the initial machine learning
 ## Dashboard
 The final outputs will have an interactive display on Tableau Pupblic and communicated through Google Slides.
 
-
 ## Data Environment
 1. GitBash 2.28.0 
-2. Jupyter Notebook 6.1.4 
-3. Ipykernel 5.3.4
+2. Ipykernel 5.3.4
+3. Jupyter Notebook 6.1.4 
 4. Numpy 1.19.3
 5. Pandas 1.1.4
 6. Python 3.7.7
