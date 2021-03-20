@@ -17,4 +17,5 @@ The final outputs will have an interactive display on Tableau Public and communi
 3. Jupyter Notebook 6.1.4 
 4. Numpy 1.19.3
 5. Pandas 1.1.4
-6. Python 3.7.7
+6. PgAdmin 5.0 
+7. Python 3.7.7
