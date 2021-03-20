@@ -1,1 +1,1 @@
-db_password = 'Princ3$$760719881'
+db_password = 'postgres'
