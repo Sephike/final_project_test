@@ -1,7 +1,7 @@
 # final_project_test
 UT McCombs Data Visualization Boot Camp Group Project
 ![Pic 1](https://github.com/Sephike/predict_user_score/blob/x_role/Images/video_game_controllers.jpg)
-Image Source: Guinnessworldrecords<sup>3</sup>
+Image Source: Guinnessworldrecords<sup>4</sup>
 
 ## Topic Selection
 In selecting a topic, the team wanted to pick a dataset that represented a common interest amongst each team member.  To varying degrees, each team member is interested in the video game industry, which has many aspects to explore such as sales, genres, platforms, rankings, and ratings.  In particular, the video game industry is on track to hit $138 billion in revenue in 2021 according to J. Clement<sup>2</sup>.  With this much revenue, there is a wealth of data to be mined within the video game industry.  
@@ -24,11 +24,11 @@ The investigating question is to determine the main drivers behind global video 
 6. PgAdmin 5.0 
 7. Python 3.7.7
 
-The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code may be used to clean or compare python scripts or to update the markdown.  The final outputs will have an interactive display on Tableau Public and communicated through Google Slides.
-
 ### Data Exploration
-✓ Takes in data in from the provisional
-database
+The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code may be used to clean or compare python scripts or to update the markdown.  The final outputs will have an interactive display on Tableau Public and communicated through Google Slides<sup>4</sup>.
+
+## Cleaned DataFrame
+![Pic 2]()
 ✓ Output label(s) for input data
 ✓ Simple statistical analysis
 
@@ -54,7 +54,10 @@ database
 
 2. Clement, J. (2021, January 29). Value of the global video games market 2012-2021. Statista. https://rb.gy/apmgqy  
 
-3. Plant, Mike. (2018, December 21). Top 10 best-selling videogame consoles. Guinnessworldrecords. https://rb.gy/df11vn
+3. Marketing. (2021). Retro Video Games Newsletter. Slidesgo. https://rb.gy/if1nnk
+
+4. Plant, Mike. (2018, December 21). Top 10 best-selling videogame consoles. Guinnessworldrecords. https://rb.gy/df11vn
+
 
 ### Team Communication Protocols
 The team will work virtually using the Zoom and Slack technologies.  The team is expected to use individual branches to their commit work to GitHub, where the project is warehoused.  The branches will be merged when the team meets to review each other's work.   
