@@ -24,15 +24,27 @@ The investigating question is to determine the main drivers behind global video 
 6. PgAdmin 5.0 
 7. Python 3.7.7
 
-### Data Exploration
 The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code may be used to clean or compare python scripts or to update the markdown.  The final outputs will have an interactive display on Tableau Public and communicated through Google Slides<sup>4</sup>.
 
-## Cleaned DataFrame
-![Pic 2]()
-✓ Output label(s) for input data
-✓ Simple statistical analysis
+## Database Integration
+- Database stores static data for use during the project
+- Database interfaces with the project in some format (e.g., scraping updates the database)
+- Includes at least two tables (or collections, if using MongoDB)
+- Includes at least one join using the database language (not including any joins in Pandas)
+- Includes at least one connection string (using SQLAlchemy or PyMongo)
 
-### Analysis using a Machine Learning Model
+## Data Exploration 
+### Cleaned DataFrame
+![Pic 2](https://github.com/Sephike/predict_user_score/blob/square_role/Images/cleanedDF.png)      
+After the data was imported into Postgres and pulled into Jupyter Notebook, the data was cleaned using the pandas library.
+
+### Simple statistical analysis
+
+## Analysis using a Machine Learning Model
+- Description of preliminary data preprocessing
+- Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
+- Description of how data was split into training and testing sets
+- Explanation of model choice, including limitations and benefits
 ✓ Description of data preprocessing
 ✓ Description of feature engineering and the feature selection, including the team's decision-making process
 ✓ Description of how data was split into training and testing sets
@@ -41,13 +53,13 @@ The starting data set will be imported into Postgres using SQL.  The appropriate
 ✓ Description of how the model was trained (or retrained if the team used an existing model)
 ✓ Description and explanation of model's confusion matrix, including final accuracy score
 
-### Results and Links 
+## Results and Links 
 - Tableau Public links, Google Slides Link
 - Images from the initial analysis
 - Data (images or report) from the machine learning task
 - At least one interactive element
 
-### Recommendations
+## Recommendations
 
 ## Reference List
 1. Alqunber, Abdulshaheed. (2019, April 12). Video games sales 2019. Kaggle. https://rb.gy/gtadhs
@@ -59,5 +71,5 @@ The starting data set will be imported into Postgres using SQL.  The appropriate
 4. Plant, Mike. (2018, December 21). Top 10 best-selling videogame consoles. Guinnessworldrecords. https://rb.gy/df11vn
 
 
-### Team Communication Protocols
+## Team Communication Protocols
 The team will work virtually using the Zoom and Slack technologies.  The team is expected to use individual branches to their commit work to GitHub, where the project is warehoused.  The branches will be merged when the team meets to review each other's work.   
