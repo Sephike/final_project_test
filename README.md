@@ -38,6 +38,15 @@ The starting data set will be imported into Postgres using SQL.  The appropriate
 ![Pic 2](https://github.com/Sephike/predict_user_score/blob/square_role/Images/cleanedDF.png)      
 After the data was imported into Postgres and pulled into Jupyter Notebook, the data was cleaned using the pandas library.
 
+![Columns we dropped](https://github.com/Sephike/predict_user_score/blob/Images/dropped_columns_user_critic_score.png) 
+
+![The columns we used for the DataFrame](https://github.com/Sephike/predict_user_score/blob/Images/user_df_critic_df.png) 
+
+![The way we dropped the NA and duplicates for critic score](https://github.com/Sephike/predict_user_score/blob/Images/dropping_na_duplicates_critic.png) 
+
+![The way we dropped the NA and duplicates for user score](https://github.com/Sephike/predict_user_score/blob/Images/dropping_na_duplicates_user.png) 
+Once we exhausted the use of the first dataset, we brought in a new one with two columns that caught our interest. Critic and user score, both were a strong focus in our questions we asked at the start of the project. We then cleaned up the data and deleted any duplicates to prevent over fitting the models.
+
 ### Simple statistical analysis
 
 ## Analysis using a Machine Learning Model
@@ -62,13 +71,15 @@ After the data was imported into Postgres and pulled into Jupyter Notebook, the 
 ## Recommendations
 
 ## Reference List
-1. Alqunber, Abdulshaheed. (2019, April 12). Video games sales 2019. Kaggle. https://rb.gy/gtadhs
+1. Smith, Gregory. (2016, October 26). Video Game Sales. Kaggle. https://www.kaggle.com/gregorut/videogamesales
 
-2. Clement, J. (2021, January 29). Value of the global video games market 2012-2021. Statista. https://rb.gy/apmgqy  
+2. Alqunber, Abdulshaheed. (2019, April 12). Video games sales 2019. Kaggle. https://rb.gy/gtadhs
 
-3. Marketing. (2021). Retro Video Games Newsletter. Slidesgo. https://rb.gy/if1nnk
+3. Clement, J. (2021, January 29). Value of the global video games market 2012-2021. Statista. https://rb.gy/apmgqy  
 
-4. Plant, Mike. (2018, December 21). Top 10 best-selling videogame consoles. Guinnessworldrecords. https://rb.gy/df11vn
+4. Marketing. (2021). Retro Video Games Newsletter. Slidesgo. https://rb.gy/if1nnk
+
+5. Plant, Mike. (2018, December 21). Top 10 best-selling videogame consoles. Guinnessworldrecords. https://rb.gy/df11vn
 
 
 ## Team Communication Protocols
