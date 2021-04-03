@@ -38,7 +38,7 @@ The starting data set will be imported into Postgres using SQL.  The appropriate
 ![Pic 2](https://github.com/Sephike/predict_user_score/blob/square_role/Images/cleanedDF.png)      
 After the data was imported into Postgres and pulled into Jupyter Notebook, the data was cleaned using the pandas library.
 
-![Columns we dropped](https://github.com/Sephike/predict_user_score/blob/Images/dropped_columns_user_critic_score.png) 
+![Columns we dropped](https://github.com/Sephike/predict_user_score/Images/dropped_columns_user_critic_score.png) 
 
 ![The columns we used for the DataFrame](https://github.com/Sephike/predict_user_score/blob/Images/user_df_critic_df.png) 
 
