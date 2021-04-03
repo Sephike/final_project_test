@@ -40,11 +40,11 @@ After the data was imported into Postgres and pulled into Jupyter Notebook, the 
 
 ![Columns we dropped](https://github.com/Sephike/predict_user_score/blob/main/Images/dropped_columns_user_critic_score.png) 
 
-![The columns we used for the DataFrame](https://github.com/Sephike/predict_user_score/blob/Images/user_df_critic_df.png) 
+![The columns we used for the DataFrame](https://github.com/Sephike/predict_user_score/blob/main/Images/user_df_critic_df.png) 
 
-![The way we dropped the NA and duplicates for critic score](https://github.com/Sephike/predict_user_score/blob/Images/dropping_na_duplicates_critic.png) 
+![The way we dropped the NA and duplicates for critic score](https://github.com/Sephike/predict_user_score/blob/main/Images/dropping_na_duplicates_critic.png) 
 
-![The way we dropped the NA and duplicates for user score](https://github.com/Sephike/predict_user_score/blob/Images/dropping_na_duplicates_user.png) 
+![The way we dropped the NA and duplicates for user score](https://github.com/Sephike/predict_user_score/blob/main/Images/dropping_na_duplicates_user.png) 
 
 Once we exhausted the use of the first dataset, we brought in a new one with two columns that caught our interest. Critic and user score, both were a strong focus in our questions we asked at the start of the project. We then cleaned up the data and deleted any duplicates to prevent over fitting the models.
 
