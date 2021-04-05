@@ -38,13 +38,9 @@ The starting data set will be imported into Postgres using SQL.  The appropriate
 ![Pic 2](https://github.com/Sephike/predict_user_score/blob/square_role/Images/cleanedDF.png)
 We had explored and cleaned about six files in jupyter notebook before reaching the the three we merged together to make our final csv. Three of our files had been rejected due to high NaN values we could not properly utilize. We also ran into many problems with importing files using pgadmin, and this was a contributor to what data we used in the end.
 
-![Final sql Table List](https://github.com/Sephike/predict_user_score/blob/main/Images/final_sql_table_list.PNG)
+![Final sql Table List](https://github.com/Sephike/predict_user_score/blob/main/Images/final_SQL_table_list.PNG)
 
-After final cleaning our three datasets in sql, and left joining them we were left with about 1400 rows of very clean and useful data.
-
-![Final vg Data](https://github.com/Sephike/predict_user_score/blob/main/Images/final_vg_data.PNG)
-
-To prevent many uses such as duplicates of names and the potential bias that may give to a game we dropped the duplicates. We started this process first by making all name columns upper cased, after we dropped the duplicates and resorted all the names appropiately.
+After final cleaning our three datasets in sql, and left joining them we were left with about 1400 rows of very clean and useful data. To prevent many uses such as duplicates of names and the potential bias that may give to a game we dropped the duplicates. We started this process first by making all name columns upper cased, after we dropped the duplicates and resorted all the names appropiately.
 
 ![Final 1st Join](https://github.com/Sephike/predict_user_score/blob/main/Images/final_1st_join.PNG)
 ![Final 2nd Join](https://github.com/Sephike/predict_user_score/blob/main/Images/final_2nd_join.PNG)
