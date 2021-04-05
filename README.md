@@ -50,16 +50,22 @@ After final cleaning our three datasets in sql, and left joining them we were le
 The description of the preliminary data preprocessing was to create the get_dummies() function, Which is used to convert categorical variable into dummy/indicator variables. After successfully dropping the columns Genre. From the model the Metascore data was divided by 10 in order to be in the same scale with the critic score and user score. 
 
 ![Metascore Scaled](https://github.com/Sephike/predict_user_score/blob/main/Images/metascore_scaled.png)
+
 A linear regression model was created to show the Metascore into Plot Scatter.
 
 ![User Score Metascore](https://github.com/Sephike/predict_user_score/blob/main/Images/User_score_Metascore.png)
+
 A pairplot was created the dataFrame columns, to show the correlation of each columns. 
 
 ![Machine Learning Model 2](https://github.com/Sephike/predict_user_score/blob/main/Images/Machine_Learning_Model_2.png)
+
 The model presents the variance score: 1 is perfect prediction and shows the mean squared error.
 
 ![Mean Variance Score](https://github.com/Sephike/predict_user_score/blob/main/Images/mean_variance_score.png)
+
 ### Simple statistical analysis
+- View global sales across regional sales
+- View how critic and user score might impact sales
 
 ## Analysis using a Machine Learning Model
 - Description of preliminary data preprocessing
