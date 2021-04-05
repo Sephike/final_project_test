@@ -24,18 +24,10 @@ The investigating question is to determine the main drivers behind global video 
 6. PgAdmin 5.0 
 7. Python 3.7.7
 
-The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code may be used to clean or compare python scripts or to update the markdown. The final outputs will have an interactive display on Tableau Public and communicated through Google Slides<sup>4</sup>. Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/) we made an erd to show our dataset columns and how we planned to join them.
-
-## Database Integration
-- Database stores static data for use during the project
-- Database interfaces with the project in some format (e.g., scraping updates the database)
-- Includes at least two tables (or collections, if using MongoDB)
-- Includes at least one join using the database language (not including any joins in Pandas)
-- Includes at least one connection string (using SQLAlchemy or PyMongo)
+The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code may be used to clean or compare python scripts or to update the markdown. The final outputs will have an interactive display on Tableau Public and communicated through [Google Slides](https://rb.gy/nbalj3)<sup>4</sup>. Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/) we made an erd to show our dataset columns and how we planned to join them.
 
 ## Data Exploration 
 ### Cleaned DataFrame
-![Pic 2](https://github.com/Sephike/predict_user_score/blob/square_role/Images/cleanedDF.png)
 We had explored and cleaned about six files in jupyter notebook before reaching the the three we merged together to make our final csv. Three of our files had been rejected due to high NaN values we could not properly utilize. We also ran into many problems with importing files using pgadmin, and this was a contributor to what data we used in the end.
 
 ![Final sql Table List](https://github.com/Sephike/predict_user_score/blob/main/Images/final_SQL_table_list.PNG)
@@ -67,36 +59,7 @@ The model presents the variance score: 1 is perfect prediction and shows the mea
 - View global sales across regional sales
 - View how critic and user score might impact sales
 
-## Analysis using a Machine Learning Model
-- Description of preliminary data preprocessing
-- Description of preliminary feature engineering and preliminary feature selection, including the decision-making process
-- Description of how data was split into training and testing sets
-- Explanation of model choice, including limitations and benefits
-✓ Description of data preprocessing
-✓ Description of feature engineering and the feature selection, including the team's decision-making process
-✓ Description of how data was split into training and testing sets
-✓ Explanation of model choice, including limitations and benefits
-✓ Explanation of changes in model choice 
-✓ Description of how the model was trained (or retrained if the team used an existing model)
-✓ Description and explanation of model's confusion matrix, including final accuracy score
-
-## Results and Links 
-- Tableau Public links, Google Slides Link
-- Images from the initial analysis
-- Data (images or report) from the machine learning task
-- At least one interactive element
-
 ## Recommendations
-
-## Reference List
-1. Alqunber, Abdulshaheed. (2019, April 12). Video games sales 2019. Kaggle. https://rb.gy/gtadhs
-
-2. Clement, J. (2021, January 29). Value of the global video games market 2012-2021. Statista. https://rb.gy/apmgqy  
-
-3. Marketing. (2021). Retro Video Games Newsletter. Slidesgo. https://rb.gy/if1nnk
-
-4. Plant, Mike. (2018, December 21). Top 10 best-selling videogame consoles. Guinnessworldrecords. https://rb.gy/df11vn
-
 
 ## Team Communication Protocols
 The team will work virtually using the Zoom and Slack technologies.  The team is expected to use individual branches to their commit work to GitHub, where the project is warehoused.  The branches will be merged when the team meets to review each other's work.   
