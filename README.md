@@ -24,7 +24,7 @@ The investigating question is to determine the main drivers behind global video 
 6. PgAdmin 5.0 
 7. Python 3.7.7
 
-The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code may be used to clean or compare python scripts or to update the markdown.  The final outputs will have an interactive display on Tableau Public and communicated through Google Slides<sup>4</sup>.
+The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code may be used to clean or compare python scripts or to update the markdown. The final outputs will have an interactive display on Tableau Public and communicated through Google Slides<sup>4</sup>. Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/) we made an erd to show our dataset columns and how we planned to join them.
 
 ## Database Integration
 - Database stores static data for use during the project
@@ -35,9 +35,30 @@ The starting data set will be imported into Postgres using SQL.  The appropriate
 
 ## Data Exploration 
 ### Cleaned DataFrame
-![Pic 2](https://github.com/Sephike/predict_user_score/blob/square_role/Images/cleanedDF.png)      
-After the data was imported into Postgres and pulled into Jupyter Notebook, the data was cleaned using the pandas library.
+![Pic 2](https://github.com/Sephike/predict_user_score/blob/square_role/Images/cleanedDF.png)
+We had explored and cleaned about six files in jupyter notebook before reaching the the three we merged together to make our final csv. Three of our files had been rejected due to high NaN values we could not properly utilize. We also ran into many problems with importing files using pgadmin, and this was a contributor to what data we used in the end.
 
+![Final sql Table List](https://github.com/Sephike/predict_user_score/blob/main/Images/final_sql_table_list.png)
+
+After final cleaning our three datasets in sql, and left joining them we were left with about 1400 rows of very clean and useful data.
+
+![Final vg Data](https://github.com/Sephike/predict_user_score/blob/main/Images/final_vg_data.png)
+
+To prevent many uses such as duplicates of names and the potential bias that may give to a game we dropped the duplicates. We started this process first by making all name columns upper cased, after we dropped the duplicates and resorted all the names appropiately.
+
+![Final 1st Join](https://github.com/Sephike/predict_user_score/blob/main/Images/final_1st_join.png)
+![Final 2nd Join](https://github.com/Sephike/predict_user_score/blob/main/Images/final_2nd_join.png)
+
+## Machine Learning
+### Preprocessing and Feature Selection
+The description of the preliminary data preprocessing was to create the get_dummies() function, Which is used to convert categorical variable into dummy/indicator variables. After successfully dropping the columns Genre. From the model the Metascore data was divided by 10 in order to be in the same scale with the critic score and user score. 
+![Metascore Scaled](https://github.com/Sephike/predict_user_score/blob/main/Images/metascore_scaled.png)
+A linear regression model was created to show the Metascore into Plot Scatter.
+![User Score Metascore](https://github.com/Sephike/predict_user_score/blob/main/Images/User_score_Metascore.png)
+A pairplot was created the dataFrame columns, to show the correlation of each columns. 
+![Machine Learning Model 2](https://github.com/Sephike/predict_user_score/blob/main/Images/Machine_Learning_Model_2.png)
+The model presents the variance score: 1 is perfect prediction and shows the mean squared error.
+![Mean Variance Score](https://github.com/Sephike/predict_user_score/blob/main/Images/mean_variance_score.png)
 ### Simple statistical analysis
 
 ## Analysis using a Machine Learning Model
