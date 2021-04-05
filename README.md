@@ -46,18 +46,22 @@ After final cleaning our three datasets in sql, and left joining them we were le
 
 To prevent many uses such as duplicates of names and the potential bias that may give to a game we dropped the duplicates. We started this process first by making all name columns upper cased, after we dropped the duplicates and resorted all the names appropiately.
 
-![Final 1st Join](https://github.com/Sephike/predict_user_score/blob/main/Images/final_1st_join.png)
+![Final 1st Join](https://github.com/Sephike/predict_user_score/blob/main/Images/final_1st_join.PNG)
 ![Final 2nd Join](https://github.com/Sephike/predict_user_score/blob/main/Images/final_2nd_join.png)
 
 ## Machine Learning
 ### Preprocessing and Feature Selection
 The description of the preliminary data preprocessing was to create the get_dummies() function, Which is used to convert categorical variable into dummy/indicator variables. After successfully dropping the columns Genre. From the model the Metascore data was divided by 10 in order to be in the same scale with the critic score and user score. 
+
 ![Metascore Scaled](https://github.com/Sephike/predict_user_score/blob/main/Images/metascore_scaled.png)
 A linear regression model was created to show the Metascore into Plot Scatter.
+
 ![User Score Metascore](https://github.com/Sephike/predict_user_score/blob/main/Images/User_score_Metascore.png)
 A pairplot was created the dataFrame columns, to show the correlation of each columns. 
+
 ![Machine Learning Model 2](https://github.com/Sephike/predict_user_score/blob/main/Images/Machine_Learning_Model_2.png)
 The model presents the variance score: 1 is perfect prediction and shows the mean squared error.
+
 ![Mean Variance Score](https://github.com/Sephike/predict_user_score/blob/main/Images/mean_variance_score.png)
 ### Simple statistical analysis
 
