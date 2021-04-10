@@ -28,7 +28,7 @@ The starting data set will be imported into Postgres using SQL.  The appropriate
 
 ## Data Exploration 
 ### Cleaned DataFrame
-We had explored and cleaned about six files in jupyter notebook before reaching the the three we merged together to make our final csv. Three of our files had been rejected due to high NaN values we could not properly utilize. We also ran into many problems with importing files using pgadmin, and this was a contributor to what data we used in the end.
+We had explored and cleaned about six files in jupyter notebook before reaching the the three we merged together to make our final csv. Three of our files had been rejected due to high NaN values we could not properly utilize the files are [here](Resources/3.Rejected_Files). We also ran into many problems with importing files using pgadmin, and this was a contributor to what data we used in the [end](Resources/final_vg_sales.csv).
 
 ![Final sql Table List](https://github.com/Sephike/predict_user_score/blob/main/Images/final_SQL_table_list.PNG)
 
