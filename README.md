@@ -26,7 +26,7 @@ The investigating question is to determine the main drivers behind global video 
 
 The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code may be used to clean or compare python scripts or to update the markdown. The final outputs will have an interactive display on Tableau Public and communicated through [Google Slides](https://rb.gy/nbalj3)<sup>4</sup>. Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/) we made an erd to show our dataset columns and how we planned to join them.
 
-[Final ERD](https://github.com/Sephike/predict_user_score/blob/main/Images/final_ERD.png)
+[Final ERD](Images/final_ERD.png)
 
 ## Data Exploration 
 ### Cleaned DataFrame
