@@ -9,22 +9,12 @@ In selecting a topic, the team wanted to pick a dataset that represented a commo
 ## Investigative Questions and Data Sources
 The investigating question is to determine the main drivers behind global video game sales.  The starting dataset was sourced from Kaggle<sup>1</sup> with data representing over 55,000 video games sales from 2019.  Depending on the output from the machine learning model, other follow up questions are listed.  
 
-1. What is the main drivers behind global sales?  Platform, Genre, ESRB Rating, User Score, Critic Score?
-2. Does the User Score predict higher global sales by Platform? 
-3. What is the correlation between User Scores and the Critic Score by Genre? 
-4. What is the correlation between User Scores and the Critic Score by ESRB Rating? 
+1. What is the main drivers behind North American sales? Genre, ESRB Rating?
+2. Does the Metascore predict higher North American sales? 
+3. What is the correlation between User Scores and the MetaScore? 
 
-## Methodology and Technologies Used
-### Data Environment and Technologies 
-1. GitBash 2.28.0 
-2. Ipykernel 5.3.4
-3. Jupyter Notebook 6.1.4 
-4. Numpy 1.19.3
-5. Pandas 1.1.4
-6. PgAdmin 5.0 
-7. Python 3.7.7
-
-The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code may be used to clean or compare python scripts or to update the markdown. The final outputs will have an interactive display on [Tableau Public](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_v1/LandingPage?publish=yes) and communicated through [Google Slides](https://rb.gy/nbalj3)<sup>4</sup>. Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/) we made an erd to show our dataset columns and how we planned to join them.
+## Methodology and Technologies Used 
+The starting data set will be imported into Postgres using SQL. The appropriate password and config files will be added to access the Postgres database. Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset. Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis. A basic linear regression or logistic model will be the initial machine learning model. Visual Studio Code may be used to clean or compare python scripts or to update the markdown. The final outputs will have an interactive display on [Tableau Public](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage) and communicated through [Google Slides](https://rb.gy/nbalj3)<sup>4</sup>. Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/) we made an erd to show our dataset columns and how we planned to join them.
 
 ![Final ERD](https://github.com/Sephike/predict_user_score/blob/main/Images/final_ERD.png)
 
@@ -40,37 +30,42 @@ After final cleaning our three datasets in sql, and left joining them we were le
 ### Preprocessing and Feature Selection
 The description of the preliminary data preprocessing was to create the get_dummies() function, Which is used to convert categorical variable into dummy/indicator variables. After successfully dropping the columns Genre. From the model the Metascore data was divided by 10 in order to be in the same scale with the critic score and user score. 
 
+### Simple statistical analysis
+- View global sales across regional sales
+- View how critic and user score might impact sales
+- A pairplot was created using the seaborn library to show the correlation of each columns. 
+![Machine Learning Model 2](https://github.com/Sephike/predict_user_score/blob/main/Images/Machine_Learning_Model_2.png)
+
+### Splitting the Data
+In the first two models splitting the data was not necessary. However, when looking at the Random Forest Regressor, we needed to split the x and y into training and testing sets. For the x variable, we used columns: E, E10, M, RP, T, Action, Adventure, Fighting, Misc, Platform, Puzzle, Racing, Role-Playing, Shooter, Simulation, Sports, and Strategy. For the y variable, we used NA Sales to determine if the genres and ESRB ratings changed sales in the highest grossing region. 
+
 ![Metascore Scaled](https://github.com/Sephike/predict_user_score/blob/main/Images/metascore_scaled.png)
 
 A linear regression model was created to show the Metascore into Plot Scatter.
 
 ![User Score Metascore](https://github.com/Sephike/predict_user_score/blob/main/Images/User_score_Metascore.png)
 
-### Metascore vs NA Sales
+### Model Choice
+The desired output for the model is a number, making a regression model the best fit. We explored several linear regression models based on different variables. The two models that gave the most interesting results are listed below. In the early phase linear regression was a quick way to test different variables against each other. Using a more complex machine learning model, the next model explored was the Random Forest Regressor. 
 
-A pairplot was created the dataFrame columns, to show the correlation of each columns. 
+### Limitations and Benefits
+Using linear regression has a limitation of comparing two variables. In an early analysis, the benefit of linear regression is quickly comparing relationships between two variables. The benefit of using the random forest regressor is it allows to analyze more variables. However, the time it takes to dial in on the optimization of the model is the main limiting factor.
 
-![Machine Learning Model 2](https://github.com/Sephike/predict_user_score/blob/main/Images/Machine_Learning_Model_2.png)
-
+## Results
+### Metascore vs NA Sales Linear Regression
 The model presents the variance score: 1 is perfect prediction and shows the mean squared error.
 
 ![Mean Variance Score](https://github.com/Sephike/predict_user_score/blob/main/Images/mean_variance_score.png)
 
-### Metascore vs Userscore
+### Metascore vs Userscore Linear Regression
 
-We made another linear regression looking at how to metascore compares to the userscore.
-
-The scores we got were not horrible but could have been much better, this is where we started to realize how limited our data was in terms or exploration.
+We made another linear regression looking at how to metascore compares to the userscore. The scores we got were not horrible but could have been much better, this is where we started to realize how limited our data was in terms or exploration.
 
 ### Random Forest Regressor
+Last model we made we used a random forest regressor and split the data into X and y then to X_train, y_train, X_test, and y_test. We used the genre dummies and esrb rating dummies, to test if they made an impact on NA Sales. The data looked best using a n estimator of 10, which is not a strong number of iterations to properly test the data.
 
-Last model we made we used a random forest regressor and split the data into X and y then to X_train, y_train, X_test, and y_test. We used the genre dummies and esrb rating dummies, to test if they made an impact on NA Sales.
-
-### Simple statistical analysis
-- View global sales across regional sales
-- View how critic and user score might impact sales
+### Future models to Explore
+Looking at the machine learning models avaiable, we would like to explore Cluster Centroid and or XGboost next.
 
 ## Recommendations
-Looking at our data and the results of it, there are a few key things we would have done differently. The top one is identify more columns to work with this would allow us to drop columns without it hurting our models as much columns such as budget for games, developement time, and number of QA testing.
-## Team Communication Protocols
-The team will work virtually using the Zoom and Slack technologies.  The team is expected to use individual branches to their commit work to GitHub, where the project is warehoused.  The branches will be merged when the team meets to review each other's work.   
+Looking at the accuracy of the models, the linear regression models had good mean squared error but a poor variance score. Because looking at two variables is limiting, using the random forest regressor added in ESRB rating and Genre expanded the model. Due to the low accuracy of the random forest model, it is recommended to add more columns such as: budget for games, developement time, and number of QA testing. In the data cleaning phase, more columns of data would allow for more experimenting, like dropping columns which could greatly improve accuarcy.
