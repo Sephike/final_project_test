@@ -36,9 +36,6 @@ We had explored and [cleaned](Resources/2.Cleaned_Files) about six files in jupy
 
 After final cleaning our three datasets in sql, and left joining them we were left with about 1400 rows of very clean and useful data. To prevent many uses such as duplicates of names and the potential bias that may give to a game we dropped the duplicates. We started this process first by making all name columns upper cased, after we dropped the duplicates and resorted all the names appropiately.
 
-![Final 1st Join](https://github.com/Sephike/predict_user_score/blob/main/Images/final_1st_join.PNG)
-![Final 2nd Join](https://github.com/Sephike/predict_user_score/blob/main/Images/final_2nd_join.PNG)
-
 ## Machine Learning
 ### Preprocessing and Feature Selection
 The description of the preliminary data preprocessing was to create the get_dummies() function, Which is used to convert categorical variable into dummy/indicator variables. After successfully dropping the columns Genre. From the model the Metascore data was divided by 10 in order to be in the same scale with the critic score and user score. 
