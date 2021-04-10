@@ -26,9 +26,11 @@ The investigating question is to determine the main drivers behind global video 
 
 The starting data set will be imported into Postgres using SQL.  The appropriate password and config files will be added to access the Postgres database.  Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset.  Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis.  A basic linear regression or logistic model will be the initial machine learning model.  Visual Studio Code may be used to clean or compare python scripts or to update the markdown. The final outputs will have an interactive display on Tableau Public and communicated through [Google Slides](https://rb.gy/nbalj3)<sup>4</sup>. Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/) we made an erd to show our dataset columns and how we planned to join them.
 
+[Final ERD](https://github.com/Sephike/predict_user_score/blob/main/Images/final_ERD.jpg)
+
 ## Data Exploration 
 ### Cleaned DataFrame
-We had explored and cleaned about six files in jupyter notebook before reaching the the three we merged together to make our final csv. Three of our files had been rejected due to high NaN values we could not properly utilize the files are [here](Resources/3.Rejected_Files). We also ran into many problems with importing files using pgadmin, and this was a contributor to what data we used in the [end](Resources/final_vg_sales.csv).
+We had explored and [cleaned](Resources/2.Cleaned_Files) about six files in jupyter notebook before reaching the the three we merged together to make our final csv. Three of our files had been rejected due to high NaN values we could not properly utilize the files are [here](Resources/3.Rejected_Files). We also ran into many problems with importing files using [pgadmin](final_sql.sql), and this was a contributor to what data we used in the [end](Resources/final_vg_data.csv).
 
 ![Final sql Table List](https://github.com/Sephike/predict_user_score/blob/main/Images/final_SQL_table_list.PNG)
 
