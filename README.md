@@ -46,6 +46,8 @@ A linear regression model was created to show the Metascore into Plot Scatter.
 
 ![User Score Metascore](https://github.com/Sephike/predict_user_score/blob/main/Images/User_score_Metascore.png)
 
+### Metascore vs NA Sales
+
 A pairplot was created the dataFrame columns, to show the correlation of each columns. 
 
 ![Machine Learning Model 2](https://github.com/Sephike/predict_user_score/blob/main/Images/Machine_Learning_Model_2.png)
@@ -54,11 +56,21 @@ The model presents the variance score: 1 is perfect prediction and shows the mea
 
 ![Mean Variance Score](https://github.com/Sephike/predict_user_score/blob/main/Images/mean_variance_score.png)
 
+### Metascore vs Userscore
+
+We made another linear regression looking at how to metascore compares to the userscore.
+
+The scores we got were not horrible but could have been much better, this is where we started to realize how limited our data was in terms or exploration.
+
+### Random Forest Regressor
+
+Last model we made we used a random forest regressor and split the data into X and y then to X_train, y_train, X_test, and y_test. We used the genre dummies and esrb rating dummies, to test if they made an impact on NA Sales.
+
 ### Simple statistical analysis
 - View global sales across regional sales
 - View how critic and user score might impact sales
 
 ## Recommendations
-
+Looking at our data and the results of it, there are a few key things we would have done differently. The top one is identify more columns to work with this would allow us to drop columns without it hurting our models as much columns such as budget for games, developement time, and number of QA testing.
 ## Team Communication Protocols
 The team will work virtually using the Zoom and Slack technologies.  The team is expected to use individual branches to their commit work to GitHub, where the project is warehoused.  The branches will be merged when the team meets to review each other's work.   
