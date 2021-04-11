@@ -7,24 +7,27 @@ Image Source: Guinnessworldrecords
 In selecting a topic, the team wanted to pick a dataset that represented a common interest amongst each team member.  To varying degrees, each team member is interested in the video game industry, which has many aspects to explore such as sales, genres, platforms, rankings, and ratings.  In particular, the video game industry is on track to hit $138 billion in revenue in 2021 according to J. Clement.  With this much revenue, there is a wealth of data to be mined within the video game industry.  
 
 ## Investigative Questions and Data Sources
-The investigating question is to determine the main drivers behind global video game sales.  The starting dataset was sourced from Kaggle with data representing over 55,000 video games sales from 2019.  Depending on the output from the machine learning model, other follow up questions are listed.  
+The investigating question is to determine the main drivers behind video game sales.  The starting dataset was sourced from Kaggle, which ultimately was came from VgChartz.com and Metacritic.com.  From running machine learning code, the team hopes to answer the following questions.
 
-1. What is the main drivers behind North American sales? Genre, ESRB Rating?
+1. What is the main driver behind North American sales? Genre, ESRB Rating?
 2. Does the Metascore predict higher North American sales? 
-3. What is the correlation between User Scores and the MetaScore? 
+3. What is the correlation between User Scores and the MetaScores? 
 
 ## Methodology and Technologies Used 
-The starting data set will be imported into Postgres using SQL. The appropriate password and config files will be added to access the Postgres database. Python scripts and multiple libraries will be used in Jupyter Notebook to clean and analyze the dataset. Specifically, the Pandas library will be used to clean the dataset and Numpy may be used for some light statistical analysis. A basic linear regression or logistic model will be the initial machine learning model. Visual Studio Code may be used to clean or compare python scripts or to update the markdown. The final outputs will have an interactive display on [Tableau Public](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage) and communicated through [Google Slides](https://rb.gy/nbalj3). Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/) we made an erd to show our dataset columns and how we planned to join them.
+Visual Studio Code was used to clean or compare python scripts as needed and was used to update the markdown. Python scripts and multiple libraries were used in Jupyter Notebook to clean and analyze the dataset. Specifically, the Pandas library was used to
+clean the dataset. After the data files were cleaned, they were imported into Postgres using SQL, and then combined with SQL joins.  The appropriate password and config files were added for Jpyter Notebook to access the Postgres database.  Using several libraries, basic linear regressions were the initial machine learning models to gain insights.
+
+To summarize the findings, the joined dataset was exported from PgAmin and imported into Tableau Public.  The final outputs have an interactive display on [Tableau Public](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage) and is communicated through [Google Slides](https://rb.gy/nbalj3). Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/), the ERD shows the dataset columns and how the joins were made.  
 
 ![Final ERD](https://github.com/Sephike/predict_user_score/blob/main/Images/final_ERD.png)
 
 ## Data Exploration 
 ### Cleaned DataFrame
-We had explored and [cleaned](Resources/2.Cleaned_Files) about six files in jupyter notebook before reaching the the three we merged together to make our final csv. Three of our files had been rejected due to high NaN values we could not properly utilize the files are [here](Resources/3.Rejected_Files). We also ran into many problems with importing files using [pgadmin](final_sql.sql), and this was a contributor to what data we used in the [end](Resources/final_vg_data.csv).
+About six files were explored and [cleaned](Resources/2.Cleaned_Files) in jupyter notebook before reaching the the three final files ready to be merged together.  Three of the files were [rejected](Resources/3.Rejected_Files) after dropping NaN values and leaving an insufficient amount of data to analyze. After running into issues while attempitng to import the files using [pgadmin](final_sql.sql), three files were suitable for [analysis](Resources/final_vg_data.csv).
 
 ![Final sql Table List](https://github.com/Sephike/predict_user_score/blob/main/Images/final_SQL_table_list.PNG)
 
-After final cleaning our three datasets in sql, and left joining them we were left with about 1400 rows of very clean and useful data. To prevent many uses such as duplicates of names and the potential bias that may give to a game, we dropped the duplicates. We started this process first by making all name columns upper cased, after we dropped the duplicates and resorted all the names appropiately.
+To prevent potential bias, the duplicates of the any game's name were dropped. To make the joins successful, the name columns were made to be all uppercased.  After the final cleaning of the three datasets, SQL was used to import and left join the files, leaving about 1400 rows of very clean and useful data. 
 
 ## Machine Learning
 ### Preprocessing and Feature Selection
