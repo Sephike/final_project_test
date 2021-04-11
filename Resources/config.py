@@ -1,1 +1,2 @@
-db_password = 'Gaida1234!'
+db_password = 'postgres'
+# db_password = 'Gaida1234!'
