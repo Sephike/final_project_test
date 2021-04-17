@@ -3,30 +3,30 @@ UT McCombs Data Visualization Boot Camp Group Project
 ![Pic 1](https://github.com/Sephike/predict_user_score/blob/x_role/Images/video_game_controllers.jpg)
 Image Source: Guinnessworldrecords
 
-## Quick Select
-[Cleaning Data Sources](Resources/Cleaning_data_sources.ipynb)
-
-[Final Machine Learning File](Resources/Machine_Learning_Model_final.ipynb)
-
-[Final Video Game CSV](Resources/final_vg_data.csv)
-
-[Dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage)
-
-[Presentation](https://rb.gy/nbalj3)
-
-[Entity Relationship Diagram](https://www.quickdatabasediagrams.com/)
+## Quick Select in Order of Workflow
+[Technologies](technology.md)
 
 [All Starter Files](Resources/1.Starter_Files)
 
-[All Cleaned Files](Resources/2.Cleaned_Files)
+[Cleaning Data Sources](Resources/Cleaning_data_sources.ipynb)
 
-[All Rejected Files](Resources/3.Rejected_Files)
+[All Cleaned Files](Resources/2.Cleaned_Files)
 
 [Final SQL](final_sql.sql)
 
-[Technologies](technology.md)
+[Entity Relationship Diagram](https://www.quickdatabasediagrams.com/)
+
+[Final Video Game CSV](Resources/final_vg_data.csv)
+
+[Final Machine Learning File](Resources/Machine_Learning_Model_final.ipynb)
+
+[Presentation](https://rb.gy/nbalj3)
 
 [Speaker Notes](Speaker_Notes.txt)
+
+[Dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage)
+
+[All Rejected Files](Resources/3.Rejected_Files)
 
 ## Topic Selection
 In selecting a topic, the team wanted to pick a dataset that represented a common interest amongst each team member.  To varying degrees, each team member is interested in the video game industry, which has many aspects to explore such as sales, genres, platforms, rankings, and ratings.  In particular, the video game industry is on track to hit $138 billion in revenue in 2021 according to J. Clement.  With this much revenue, there is a wealth of data to be mined within the video game industry.  
