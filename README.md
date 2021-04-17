@@ -68,7 +68,7 @@ For the second linear regression model comparing the Metascore and the Userscore
 For the Random Forest Regressor, the data was split into X and y, then X_train, y_train, X_test, and y_test. The genre dummies and esrb rating dummies were used to test if they made an impact on NA Sales. The data looked best using a n estimator of 10, which is not a strong number of iterations to rigorously test the data.  The results of n = 100 are shown below. 
 
 ### XGBoost 
-
+![XGBoost Results](Images/xgboost_results.PNG)
 
 
 ### Future models to Explore
