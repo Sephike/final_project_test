@@ -41,7 +41,7 @@ The investigating question is to determine the main drivers behind video game sa
 ## Methodology and Technologies Used 
 Visual Studio Code was used to clean or compare python scripts as needed and was used to update the markdown. Python scripts and multiple libraries were used in Jupyter Notebook to clean and analyze the dataset. Specifically, the Pandas library was used to clean the dataset. After the data files were cleaned, they were imported into Postgres using SQL, and then combined with SQL joins.  The appropriate password and config files were added for Jpyter Notebook to access the Postgres database.  Using several libraries, basic linear regressions were the initial machine learning models to gain insights.
 
-To summarize the findings, the joined dataset was exported from PgAmin and imported into Tableau Public.  The final outputs have an interactive display on [Tableau Public](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage) and is communicated through [Google Slides](https://rb.gy/nbalj3). Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/), the ERD shows the dataset columns and how the joins were made.  
+To summarize the findings, the joined dataset was exported from PgAmin and imported into Tableau Public. Using an entity relationship diagram [website](https://www.quickdatabasediagrams.com/), the ERD shows the dataset columns and how the joins were made. The final outputs have an interactive display on [Tableau Public](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage) and is communicated through [Google Slides](https://rb.gy/nbalj3).   
 
 ![Final ERD](https://github.com/Sephike/predict_user_score/blob/main/Images/final_ERD.png)
 
@@ -105,6 +105,12 @@ For the Random Forest Regressor, the data was split into X and y, then X_train, 
 
 ### Future models to Explore
 Looking at the machine learning models available, the next model that fits the data and would be a good model to explore is the Cluster Centroid model.  
+
+## Dashboard
+
+
+
+In the [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage) 
 
 ## Recommendations
 Looking at the accuracy of the models, the linear regression models had good mean squared error but a poor variance score. Because looking at two variables is limiting, using the random forest regressor added in ESRB rating and Genre expanded the model. Due to the low accuracy of the random forest model, it is recommended to add more columns such as: budget for games, developement time, and number of QA testing. In the data cleaning phase, more columns of data would allow for more experimenting, like dropping columns which could greatly improve accuarcy.
