@@ -83,14 +83,19 @@ Using linear regression has a limitation of comparing two variables. In an early
 ### Metascore vs NA Sales Linear Regression
 The model presents the variance score: 1 is perfect prediction and shows the mean squared error.
 
-![Mean Variance Score](https://github.com/Sephike/predict_user_score/blob/main/Images/mean_variance_score.png)
+![Mean Variance Score for Metascore and NA Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/mean_variance_score.png)
 
 ### Metascore vs Userscore Linear Regression
 
 For the second linear regression model comparing the Metascore and the Userscore, the scores were improved, but would not be accepted as a good model due to the low variance.  
 
+![Mean Variance Score for Metascore and Userscore](https://github.com/Sephike/predict_user_score/blob/main/Images/linear_meta_user.png)
+
 ### Random Forest Regressor
 For the Random Forest Regressor, the data was split into X and y, then X_train, y_train, X_test, and y_test. The genre dummies and esrb rating dummies were used to test if they made an impact on NA Sales. The data looked best using a n estimator of 10, which is not a strong number of iterations to rigorously test the data.  The results of n = 100 are shown below. 
+
+![Random Forest Regressor Results](Images/random_forest_score.png)
+
 
 ### XGBoost 
 ![XGBoost Results](Images/xgboost_results.PNG)
