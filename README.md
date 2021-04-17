@@ -100,11 +100,14 @@ For the Random Forest Regressor, the data was split into X and y, then X_train, 
 
 
 ### XGBoost 
+Using the same variables for the training and testing as the Random Forest Regressor, XGBoost showed little improvement in the model.
+
 ![XGBoost Results](Images/xgboost_results.PNG)
 
 
 ### Future models to Explore
 Looking at the machine learning models available, the next model that fits the data and would be a good model to explore is the Cluster Centroid model.  
+
 
 ## Dashboard
 
