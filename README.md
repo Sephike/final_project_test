@@ -47,17 +47,17 @@ To summarize the findings, the joined dataset was exported from PgAmin and impor
 
 ## Data Exploration 
 ### Cleaned DataFrame
-About six files were explored and [cleaned](Resources/2.Cleaned_Files) in jupyter notebook before reaching the the three final files ready to be merged.  Three of the files were [rejected](Resources/3.Rejected_Files) after dropping NaN values and leaving an insufficient amount of data to analyze. After running into issues while attempitng to import the files using [pgadmin](final_sql.sql), three files were suitable for [analysis](Resources/final_vg_data.csv).
+About six files were explored and [cleaned](Resources/2.Cleaned_Files) in jupyter notebook before reaching the the three final files ready to be merged.  Three of the files were [rejected](Resources/3.Rejected_Files) after dropping NaN values and leaving an insufficient amount of data to analyze. After running into issues while attempitng to import the files using [pgadmin](final_sql.sql), three files were deemed suitable for machine learning [analysis](Resources/final_vg_data.csv).
 
 ![Final sql Table List](https://github.com/Sephike/predict_user_score/blob/main/Images/final_SQL_table_list.PNG)
 
-To prevent potential bias, the duplicates of the game's name were dropped. To make the joins successful, the name columns were made as all uppercased letters.  After the final cleaning of the three datasets, SQL was used to import and left join the files, leaving about 1400 rows of clean and useful data. 
+To prevent potential bias, duplicate names were dropped. To make the joins successful, the name columns were made as all uppercased letters.  After the final cleaning of the files. Next, two left joins on the files were done using SQL to create a final file, leaving about 1400 rows of clean and useful data.
 
 ![Database Connection](Images/rejected_images/database_connection.png)
 
 ## Machine Learning
 ### Preprocessing and Feature Selection
-The description of the preliminary data preprocessing was to create the get_dummies() function, which was used to convert the categorical variable into dummy/indicator variables. After successfully dropping the Genre columns from the model, the Metascore data was then divided by 10 to be in the same scale with the critic score and user score. 
+The Genre and ESRB ratings columns were converted to the categorical column with the get_dummies() function. Using the get_dummies() function converts each unique data point into a separate column with either a 0 or 1 indicators. The Metascore data was then divided by 10 to be in the same scale with the critic score and user score. 
 
 ### Simple statistical analysis
 - View global sales across regional sales
@@ -85,7 +85,7 @@ Using linear regression has a limitation of comparing two variables. In an early
 ### Metascore vs NA Sales Linear Regression
 The model presents the variance score: 1 is perfect prediction and shows the mean squared error.
 
-![Mean Variance Score for Metascore and NA Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/mean_variance_score.png)
+![Mean Variance Score for Metascore and NA Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/NA_sales_results.PNG)
 
 ### Metascore vs Userscore Linear Regression
 
@@ -110,7 +110,7 @@ Looking at the machine learning models available, the next model that fits the d
 
 
 
-In the [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage) 
+In our [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage) there are many interactive elements that allow the user to visualize how the data reacts to different inputs.
 
 ## Recommendations
 Looking at the accuracy of the models, the linear regression models had good mean squared error but a poor variance score. Because looking at two variables is limiting, using the random forest regressor added in ESRB rating and Genre expanded the model. Due to the low accuracy of the random forest model, it is recommended to add more columns such as: budget for games, developement time, and number of QA testing. In the data cleaning phase, more columns of data would allow for more experimenting, like dropping columns which could greatly improve accuarcy.
