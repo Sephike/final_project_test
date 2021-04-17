@@ -83,7 +83,7 @@ Using linear regression has a limitation of comparing two variables. In an early
 
 ## Results
 ### Metascore vs NA Sales Linear Regression
-The model presents the variance score: 1 is perfect prediction and shows the mean squared error.
+For the mean squared error, numbers closer to zero represent a good model. For the variance score, numbers closer to one is a good model. Depending on the dataset, variance scores between 0,7 and 1.0 are considered good numbers for a model. For Metascore vs NA Sales, 6.05 is too high for a mean squared error and .03 is significantly low for a variance score.
 
 ![Mean Variance Score for Metascore and NA Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/NA_sales_results.PNG)
 
