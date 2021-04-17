@@ -105,8 +105,8 @@ Using the same variables for the training and testing as the Random Forest Regre
 ![XGBoost Results](Images/xgboost_results.PNG)
 
 
-### Future models to Explore
-Looking at the machine learning models available, the next model that fits the data and would be a good model to explore is the Cluster Centroid model.  
+### Future Models to Explore
+To build a more predictive model for video game sales, we would switch out ESRB Ratings and Genre with budget or development cycle.  Additional columns of data are needed to explore other factors that contribute to NA Sales. Regression was the main focus of this analysis, but with additional columns of data, then using machine learning models focused on decision trees could be explored. 
 
 
 ## Dashboard
@@ -116,4 +116,4 @@ Looking at the machine learning models available, the next model that fits the d
 In our [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage) there are many interactive elements that allow the user to visualize how the data reacts to different inputs.
 
 ## Recommendations
-Looking at the accuracy of the models, the linear regression models had good mean squared error but a poor variance score. Because looking at two variables is limiting, using the random forest regressor added in ESRB rating and Genre expanded the model. Due to the low accuracy of the random forest model, it is recommended to add more columns such as: budget for games, developement time, and number of QA testing. In the data cleaning phase, more columns of data would allow for more experimenting, like dropping columns which could greatly improve accuarcy.
+Looking at the accuracy of the models, the linear regression models had good mean squared error but a poor variance score. Because looking at two variables is limiting, using the random forest regressor and XGBoost added in ESRB rating and Genre expanded the model. Due to the low accuracy of the random forest model and XGBoost, it is recommended to add more columns such as: budget for games, developement time, and number of QA testing. In the data cleaning phase, more columns of data would allow for more experimenting, like dropping columns which could greatly improve accuarcy.
