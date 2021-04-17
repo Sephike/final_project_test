@@ -10,9 +10,9 @@ Image Source: Guinnessworldrecords
 
 [Final Video Game CSV](Resources/final_vg_data.csv)
 
-[Tableau Public](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage)
+[Dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage)
 
-[Google Slides](https://rb.gy/nbalj3)
+[Presentation](https://rb.gy/nbalj3)
 
 [Entity Relationship Diagram](https://www.quickdatabasediagrams.com/)
 
@@ -52,6 +52,8 @@ About six files were explored and [cleaned](Resources/2.Cleaned_Files) in jupyte
 ![Final sql Table List](https://github.com/Sephike/predict_user_score/blob/main/Images/final_SQL_table_list.PNG)
 
 To prevent potential bias, the duplicates of the game's name were dropped. To make the joins successful, the name columns were made as all uppercased letters.  After the final cleaning of the three datasets, SQL was used to import and left join the files, leaving about 1400 rows of clean and useful data. 
+
+![Database Connection](Images/rejected_images/database_connection.png)
 
 ## Machine Learning
 ### Preprocessing and Feature Selection
