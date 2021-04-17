@@ -1,0 +1,62 @@
+Google Slides:  https://rb.gy/nbalj3 
+SPEAKER NOTES:
+Slide 1: The phrase “All your base are belong to us” is a long running joke in the video game industry that stems from a poor Japanese to English translation in the game Zero Wing (1989). https://en.wikipedia.org/wiki/All_your_base_are_belong_to_us
+Slide 2: The game controllers represent each team members first video game console!
+Slide 3: Data Sources and Investigative Questions
+Slide 4: Video game Sales was common interest that we could all get excited about!
+Slide 5: All files were downloaded from Kaggle, but when you traced them back to their original source, it ended up being from VGChartz.com and Metacritic.com.  These sources are accessible to the general public, which makes the analysis easy to replicate or to extend the research further.  If questions from group: Overall, Metacritic is a stronger source than VgChartz, but due to the free public access, many researchers use the two data sources and both are viewed as a reasonable source of data.
+Slide 6: We went through several iterations of the questions as disappointing correlations came out of the dataset. 
+1. What are the main drivers behind North American sales? Genre, ESRB Rating?
+2. Does the Metascore predict higher North American sales?
+3. What is the correlation between User Scores and the MetaScore?
+Slide 7: Cleaning Files in Jupyter Notebook, Importing to PgAdmin with SQL
+Slide 8: Here is the process that was used to clean the data files in Jupyter Notebook:
+Data - Dropped any other data preventing an upload into PgAdmin
+Data Cleaning
+We needed to use three datasets to fill all needed information
+Starting off we changed the name column on all of our files to all caps
+Changed the year columns to a datetime data type
+Dropped all NaN values in all columns and dropped any name duplicates, we also summed sales for global sales and region sales
+Dropped any other data that may interfere with our models in the machine learning
+Slide 9: Inside PgAdmin is where we found all our issues with the data.  We worked through at least 6 files back and forth between Jupyter Notebook and PgAdmin.  The biggest realization came with using Uppercase for all of the Names, so that we get the least drops from mismatched data.  
+Lessons Learned from Pyle’s perspective: I’ve always joined on a number, so thinking through how to join on a Name was a big shift for me.  I also learned for the need of better handling of file management and naming conventions for files.  Using some descriptors such as _source,  _cleaned, _joined, which can help indicate the phase of process the file has been moved through.
+Slide 10: Python and Libraries in Jupyter Notebook
+Slide 11: The description of the preliminary data preprocessing was to create the get_dummies() function, Which is used to convert categorical variable into dummy/indicator variables. After successfully dropping the columns Genre. From the model the Metascore data was divided by 10 in order to be in the same scale with the critic score and user score.
+Slide 12: This is where we realized that we need more or stronger data and sought out more data files.  Early statistical analysis, Looking at the data at the start we considered looking at global sales and regional sales, We all had an interest in how the critic and user score might impact sales, View global sales across regional sales, View how critic and user score might impact sales, Linear regression on critic and user scores, Linear regression on metascore and sales, Seaborn
+Slide 13: We had a conceptual misunderstanding and went back to read through the machine learning code and corrected our work for the linear regressions.
+Slide 14: Here is how we splitting the data for the random forest regressor and the xgboost. The genres and the ESRB rating were split into categories.   The genres had categories such as racing and platforming or shooters and the ESRB ratings were things like E for everyone, M for mature. And they were crossed with NA sales. 
+Slide 15 and 16: Model Choice
+The desired output for the model is a number, making a regression model the best fit. We explored several linear regression models based on different variables. The two models that gave the most interesting results are listed below. In the early phase linear regression was a quick way to test different variables against each other. Using a more complex machine learning model, the next model explored was the Random Forest Regressor and XGBoost.
+Limitations and Benefits
+Using linear regression has a limitation of comparing two variables. In an early analysis, the benefit of linear regression is quickly comparing relationships between two variables. The benefit of using the random forest regressor is it allows to analyze more variables. However, the time it takes to dial in on the optimization of the model is the main limiting factor.  XGBoost has an efficient algorithm, but it requires a stronger math background needed to interpret the results. 
+
+Slide 17: 6 is not good, 1 is really good, closest to 0 is best
+Slide 18: 1 is a perfect score, so .36 is not that great
+Slide 19: Metascore vs Userscore had the best results, but is still not a good enough model for determining NA sales key factors. 
+Slide 20: In these models, 1 is a good number for r squared.  However, as odd as it seems, you can have negative numbers in your model.  These negative numbers mean this a poor model and requires some changes such as better/more data or having different data points.   
+Slide 21: Tableau Public Dashboard 
+Slide 22: Approach
+This dashboard is intended for video game developers to use and gain insights on past trends for overall sales to help inform future game development. With this tool, users will have the ability to identify key sale metrics across a variety of categories: Year, Region, Genre, and ESRB Ratings 
+Slide 23: Insights and Visualizations
+Some of the visualizations we intend to show in our dashboard are:
+Key trending data across global and regional sales of video games for the past 15 years
+Visualize relationship between user & critic score with global sales of video games
+Top 10 selling video games and genres from the past 15 years
+Identify which platforms are the top selling platforms and how does that change by region
+Interactions Available
+Our dashboard will have a variety of functionality/interactions available for our users. There will be a general landing page/home page that allows users to click on which tab they wish to view. There will be 2 different tabs showing key insights specific to Region and Genre sales. Within the visuals, users will have the ability to filter individual visuals by ESRB rating, Genre, Region.
+Slide 24: To make it easier for the Game designer to explore the data, several sliders and drop down selections were made.  Here’s the Demo: Tableau Public: https://rb.gy/bxitkv 
+Slide 25: References and Links
+Slide 26: Recommendations: To build a more predictive model for video game sales, we would switch out ESRB Ratings and Genre with budget or development cycle.
+Slide 27: Things we would have done differently
+Lost a lot of data from duplicate Name entries
+Gather more data on other factors: 
+game budget, length of development cycle
+Continue working on creating a more accurate model
+Categorize the data for a classification analysis
+Looking for different keys for joining
+Slide 28: Citing and referencing work is important!  Not an exhaustive list, but it has key points of references.  In jobs that require research, learning how to document and write technical documents is important. 
+Slide 29: Thanks!
+Checkout GitHub: https://rb.gy/mqmrjo 
+Google Slides:  https://rb.gy/nbalj3 
+Tableau Public: https://rb.gy/bxitkv 
