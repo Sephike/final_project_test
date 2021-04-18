@@ -65,14 +65,6 @@ The Genre and ESRB ratings columns were converted to the categorical column with
 - A pairplot was created using the seaborn library to show the correlation of each columns. 
 ![Machine Learning Model 2](https://github.com/Sephike/predict_user_score/blob/main/Images/Machine_Learning_Model_2.png)
 
-### Initial Analyses Builds
-
-![Correlation Between Metascore and Userscore](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/Correlation_User_Meta.png)
-
-![Genre and ESRB Ratings vs Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/Genre_ESRB_NA_Sales.png)
-
-![Metascore and NA Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/MetaScore_NA_Sales.png)
-
 ### Model Choice
 The desired output for the model was a number, making a regression model the best fit. After exploring several linear regression models based on different variables, the two models that gave the most interesting results are listed below. In the early phase, linear regression was a quick way to test different variables against each other. Using a more complex machine learning model, the next model explored was the Random Forest Regressor and XGBoost.
 
@@ -115,7 +107,13 @@ Additional columns of data are needed to explore other factors that contribute t
 
 ## Dashboard
 
-[insert early build image]
+### Initial Analyses Builds
+
+![Correlation Between Metascore and Userscore](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/Correlation_User_Meta.png)
+
+![Genre and ESRB Ratings vs Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/Genre_ESRB_NA_Sales.png)
+
+![Metascore and NA Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/MetaScore_NA_Sales.png)
 
 The [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final_4112021/LandingPage) was designed with a consistent theme to the tool. The dashboard is intended for video game developers to use and gain insight on (1) Understanding trend video game sales across different regions and if the ESRB Ratings or Genres have a correlation to Sales (2) What is the correlation between the Userscore and the Metascore. While using the tool, there are a variety of interactive tools available for the user. The user can choose to navigate to either the 'Sales' tab or 'Metascore' tab to begin using the dashboard.
 
