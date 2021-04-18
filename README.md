@@ -65,6 +65,8 @@ The Genre and ESRB ratings columns were converted to the categorical column with
 - A pairplot was created using the seaborn library to show the correlation of each columns. 
 ![Machine Learning Model 2](https://github.com/Sephike/predict_user_score/blob/main/Images/Machine_Learning_Model_2.png)
 
+### Initial Analyses Builds
+
 ![Correlation Between Metascore and Userscore](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/Correlation_User_Meta.png)
 
 ![Genre and ESRB Ratings vs Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/Genre_ESRB_NA_Sales.png)
