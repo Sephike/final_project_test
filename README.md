@@ -24,7 +24,7 @@ Image Source: Guinnessworldrecords
 
 [Speaker Notes](Speaker_Notes.txt)
 
-[Dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final/LandingPage)
+[Dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final_4112021/LandingPage)
 
 [All Rejected Files](Resources/3.Rejected_Files)
 
