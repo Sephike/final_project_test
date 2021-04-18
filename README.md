@@ -29,10 +29,10 @@ Image Source: Guinnessworldrecords
 [All Rejected Files](Resources/3.Rejected_Files)
 
 ## Topic Selection
-In selecting a topic, the team wanted to pick a dataset that represented a common interest amongst each team member.  To varying degrees, each team member is interested in the video game industry, which has many aspects to explore such as sales, genres, platforms, rankings, and ratings.  In particular, the video game industry is on track to hit $138 billion in revenue in 2021 according to J. Clement.  With this much revenue, there is a wealth of data to be mined within the video game industry.  
+In selecting a topic, the team wanted to pick a dataset that represented a common interest amongst each team member.  To varying degrees, each team member is interested in the video game industry, which has many aspects to explore such as sales, genres, platforms, rankings, and ratings.  In particular, the video game industry is on track to hit $138 billion in revenue in 2021 according to J. Clement.  With this much revenue, there is a wealth of data to be mined within the video game industry.   
 
 ## Investigative Questions and Data Sources
-The investigating question is to determine the main drivers behind video game sales.  The starting dataset was sourced from Kaggle, which ultimately was came from VgChartz.com and Metacritic.com.  From running machine learning code, the team hopes to answer the following questions.
+The investigating question is to determine the main drivers behind video game sales.  The starting dataset was sourced from Kaggle, which ultimately came from VgChartz.com and Metacritic.com.  From running machine learning code, the team hopes to answer the following questions.
 
 1. What is the main driver behind North American sales? Genre, ESRB Rating?
 2. Does the Metascore predict higher North American sales? 
@@ -51,13 +51,13 @@ About six files were explored and [cleaned](Resources/2.Cleaned_Files) in jupyte
 
 ![Final sql Table List](https://github.com/Sephike/predict_user_score/blob/main/Images/final_SQL_table_list.PNG)
 
-To prevent potential bias, duplicate names were dropped. To make the joins successful, the name columns were made as all uppercased letters.  After the final cleaning of the files. Next, two left joins on the files were done using SQL to create a final file, leaving about 1400 rows of clean and useful data.
+To prevent potential bias, duplicate names were dropped. To make the joins successful, the name columns were made as all uppercased letters.  After the final cleaning of the files, they were imported into PgAdmin using SQL. Next, two left joins were done on the tables using SQL to create a final table, leaving about 1400 rows of clean and useful data.
 
 ![Database Connection](Images/rejected_images/database_connection.png)
 
 ## Machine Learning
 ### Preprocessing and Feature Selection
-The Genre and ESRB ratings columns were converted to the categorical column with the get_dummies() function. Using the get_dummies() function converts each unique data point into a separate column with either 0 or 1 indicators. The Metascore data was then divided by 10 to be in the same scale with the critic score and user score. 
+The Genre and ESRB ratings columns were converted to the categorical column with the get_dummies() function. Using the get_dummies() function, it converts each unique data point into a separate column with either 0 or 1 indicators. The Metascore data was then divided by 10 to be in the same scale with the critic score and user score. 
 
 ### Simple statistical analysis
 - View global sales across regional sales
@@ -66,10 +66,10 @@ The Genre and ESRB ratings columns were converted to the categorical column with
 ![Machine Learning Model 2](https://github.com/Sephike/predict_user_score/blob/main/Images/Machine_Learning_Model_2.png)
 
 ### Model Choice
-The desired output for the model was a number, making a regression model the best fit. After exploring several linear regression models based on different variables, the two models that gave the most interesting results are listed below. In the early phase, linear regression was a quick way to test different variables against each other. Using a more complex machine learning model, the next model explored was the Random Forest Regressor and XGBoost.
+The desired output for the model was a number, making a regression model the best fit. After exploring several linear regression models based on different variables, the two models that gave the most interesting results are listed below. In the early phase, linear regression was a quick way to test different variables against each other. Using a more complex machine learning model, the next model explored was the Random Forest Regressor and XGBoost.  
 
 ### Splitting the Data
-In the linear regression models, the x and y variables were split into training and testing sets.  Metascore was the x for two of the linear regression models and crossed it against the y variables represented by the North American Sales for the first one and Userscore for the second one.  For the Random Forest Regressor and the XGBoost models, x and y were split into training and testing sets. The x variable used these columns: E, E10, M, RP, T, Action, Adventure, Fighting, Misc, Platform, Puzzle, Racing, Role-Playing, Shooter, Simulation, Sports, and Strategy. The y variable used NA Sales to determine if the genres and ESRB ratings changed sales in the highest grossing region. 
+In the linear regression models, the x and y variables were split into training and testing sets.  Metascore was the x for two of the linear regression models and crossed it against the y variables represented by the North American Sales for the first one and Userscore for the second one.  For the Random Forest Regressor and the XGBoost models, x and y were split into training and testing sets. The x variable used these columns: E, E10, M, RP, T, Action, Adventure, Fighting, Misc, Platform, Puzzle, Racing, Role-Playing, Shooter, Simulation, Sports, and Strategy. The y variable used NA Sales to determine if the genres and ESRB ratings changed sales in the highest grossing region.  
 
 ![Metascore Scaled](https://github.com/Sephike/predict_user_score/blob/main/Images/metascore_scaled.png)
 
@@ -78,17 +78,17 @@ A linear regression model was created to show the Metascore into Plot Scatter.
 ![User Score Metascore](https://github.com/Sephike/predict_user_score/blob/main/Images/User_score_Metascore.png)
 
 ### Limitations and Benefits
-Using linear regression has a limitation of comparing two variables. In an early analysis, the benefit of linear regression is quickly comparing relationships between two variables. The benefit of using the random forest regressor is it allows to analyze more variables. However, the time it takes to dial in on the optimization of the model is the main limiting factor.  XGBoost has an efficient algorithm, but it requires a stronger math background needed to interpret the results. 
+Using linear regression has the limitation of comparing two variables. In an early analysis, the benefit of linear regression is quickly comparing relationships between two variables. The benefit of using the random forest regressor is it allows to analyze more variables. However, the time it takes to dial in on the optimization of the model is the main limiting factor.  XGBoost has an efficient algorithm, but it requires a stronger math background needed to interpret the results.  
 
 ## Results
 ### Metascore vs NA Sales Linear Regression
-For the mean squared error, numbers closer to zero represent a good model. For the variance score, numbers closer to one is a good model. Depending on the dataset, variance scores between 0,7 and 1.0 are considered good numbers for a model. For Metascore vs NA Sales, 6.05 is too high for a mean squared error and .03 is significantly low for a variance score.
+For the mean squared error, numbers closer to zero represent a good model. For the variance score, numbers closer to one is a good model. Depending on the dataset, variance scores between 0.7 and 1.0 are considered good numbers for a model. For Metascore vs NA Sales, 6.05 is too high for a mean squared error and .03 is significantly low for a variance score.  
 
 ![Mean Variance Score for Metascore and NA Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/NA_sales_results.PNG)
 
 ### Metascore vs Userscore Linear Regression
 
-For the second linear regression model comparing the Metascore and the Userscore, the scores were improved, but would not be accepted as a good model due to the low variance.  
+For the second linear regression model comparing the Metascore and the Userscore, the scores were improved, but would not be accepted as a good model due to the low variance.   
 
 ![Mean Variance Score for Metascore and Userscore](https://github.com/Sephike/predict_user_score/blob/main/Images/linear_meta_user.png)
 
@@ -103,7 +103,7 @@ Using the same variables for the training and testing as the Random Forest Regre
 ![XGBoost Results](Images/xgboost_results.PNG)
 
 ### Future Models to Explore
-Additional columns of data are needed to explore other factors that contribute to NA Sales.  Switching out the ESRB Ratings and Genres with other data such as budget or development cycle data would build a more predictive model for video game sales.   Regression was the focus of this analysis, but with additional columns of data, then using machine learning models focused on decision trees could be explored. 
+Additional columns of data are needed to explore other factors that contribute to NA Sales.  Switching out the ESRB Ratings and Genres with other data such as budget or development cycle data would build a more predictive model for video game sales.   Regression was the focus of this analysis, but with additional columns of data, then using some machine learning models focused on decision trees could be explored.  
 
 ## Dashboard
 
@@ -115,33 +115,26 @@ Additional columns of data are needed to explore other factors that contribute t
 
 ![Metascore and NA Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/MetaScore_NA_Sales.png)
 
-The [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final_4112021/LandingPage) was designed with a consistent theme to the tool. The dashboard is intended for video game developers to use and gain insight on (1) Understanding trend video game sales across different regions and if the ESRB Ratings or Genres have a correlation to Sales (2) What is the correlation between the Userscore and the Metascore. While using the tool, there are a variety of interactive tools available for the user. The user can choose to navigate to either the 'Sales' tab or 'Metascore' tab to begin using the dashboard.
-
-
-![Landing_Page](Images/Final_Dashboard_Visuals/Landing_Page.png)
-
-For our [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final_4112021/LandingPage), we incorporated a design/theme to the tool. We designed it for video game developers to use and gain insight on (1) Understanding trend video game sales across different region and if ESRB or Genre have an correlation to Sales (2) What is the correlation to User and Metascore. While using the tool, there is a variety of functionality/interactions available for the user. The user can choose to navigate to either the 'Sales' tab or 'Metascore' tab to begin using the dashboard.
+The [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final_4112021/LandingPage) was designed with a consistent theme. The dashboard is intended for video game developers to use and gain insight on (1) Understanding trend video game sales across different regions and if the ESRB Ratings or Genres have a correlation to Sales (2) What is the correlation between the Userscore and the Metascore. While using the dashboard, there are a variety of interactive tools available for the user. The user can choose to navigate to either the 'Sales' tab or 'Metascore' tab to begin using the dashboard.  
 
 ![Landing_Page](Images/Final_Dashboard_Visuals/Landing_Page.png)
-
-
 
 ### Sales Tab
-In the Sales tab, users can use the 'Region' filter to view respective video game sales trends for that specific region. Image below:
+In the Sales tab, users can use the 'Region' filter to view respective video game sales trends for that specific region.
 
 ![Sales_Page](Images/Final_Dashboard_Visuals/Sales_Page.png)
 
 
-One of the key questions in this analysis was looking to evaluate if ESRB or Genre were top drivers in North American Sales. Below is a heatmap of Genre and ESRB ratings with North American sales. As you can see, there appears to be no strong relationship or indication that either drive North American sales. However, it is interesting to note that 'Racing' genre games rated 'E' appear to be the most successful category of game sold in North America.
+One of the key questions in this analysis was looking to evaluate if ESRB Ratings or Genre were top drivers in North American Sales. Below is a heatmap of Genre and ESRB ratings with North American sales.  There appears to be no strong relationship or indication that either factors drive North American sales. However, it is interesting to note that 'Racing' genre games rated 'E' appear to be the most successful category of games sold in North America.
 
 
 ![NA_Genre](Images/Final_Dashboard_Visuals/NA_Genre_ESRB.png)
 
 
 ### Metascore Tab
-Once users have navigated to the Metascore tab, they can see a variety of views such as the top genre by Metascore, what are the top 'N' games by metascore and Sales and understanding the relationship between Userscore and Metascore. The last visual is addressing one of the key questions around understanding the correlation between Userscore and Metascore. Based on the visual, there is a positive correlation between Metascore and Userscore. Meaning, as Metascore rises, Userscore follows a similar pattern.
+Once users have navigated to the Metascore tab, they can see a variety of views such as the top genre by Metascore, what are the top 'N' games by metascore and Sales as well as understanded the relationship between Userscore and Metascore. The last visual is addressing one of the key questions around understanding the correlation between Userscore and Metascore. Based on the visual, there is a positive correlation between Metascore and Userscore. Meaning, as Metascore rises, Userscore follows a similar pattern.  
 
 ![Meta_Page](Images/Final_Dashboard_Visuals/Updated_Meta.png)
 
 ## Recommendations
-Looking at the accuracy of the models, the linear regression models had good mean squared error but a poor variance score. Because looking at two variables is limiting, using the random forest regressor and XGBoost added in ESRB rating and Genre expanded the model. Due to the low accuracy of the random forest model and XGBoost, it is recommended to add more columns such as: budget for games, developement time, and number of QA testing. In the data cleaning phase, more columns of data would allow for more experimenting, like dropping columns which could greatly improve accuarcy.
+Looking at the accuracy of the models, the linear regression models had good mean squared error, but a poor variance score. Because looking at two variables is limiting, using the random forest regressor and XGBoost expanded the model by adding the ESRB Ratings and Genres. Due to the low accuracy of the random forest model and XGBoost, it is recommended to add more columns such as: budget for games, developement time, and number of QA testing. In the data cleaning phase, more columns of data would allow for more experimenting, like dropping columns which could greatly improve accuarcy.  
