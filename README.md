@@ -114,19 +114,15 @@ To build a more predictive model for video game sales, we would switch out ESRB 
 
 
 For our [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final_4112021/LandingPage), we incorporated a design/theme to the tool. We designed it for video game developers to use and gain insight on (1) Understanding trend video game sales across different region and if ESRB or Genre have an correlation to Sales (2) What is the correlation to User and Metascore. While using the tool, there is a variety of functionality/interactions available for the user. The user can choose to navigate to either the 'Sales' tab or 'Metascore' tab to begin using the dashboard.
-![Landing](Images/Final_Dashboard Visuals/Landing_Page.png)
 
 ### Sales Tab
 In the Sales tab, users can use the 'Region' filter to view respective video game sales trends for that specific region. 
-![Sales](Images/Final_Dashboard Visuals/Sales_Page.png)
+
 
 One of our key questions in this analysis was looking to evaluate if ESRB or Genre were top drivers in North American Sales. Below is a heatmap of Genre and ESRB ratings with North American sales. As you can see, there appears to be no strong relationship or indication that either drive North American sales. However, it's interesting to note that 'Racing' genre games rated 'E' appear to be the most successful category of game sold in North America.
-![Genre](Images/Final_Dashboard Visuals/NA_Genre_ESRB.png)
 
 ### Metascore Tab
 Once users have navigated to the Metascore tab, they can see a variety of views such as the top genre by Metascore, what are the top 'N' games by metascore and Sales, and understanding the relationship between Userscore and Metascore. The last visual is addressing one of our key questions around understanding the correlation between Userscore and Metascore. Based on the visual, there is a positive correlation between Metascore and Userscore. Meaning, as Metascore rises, Userscore follows a similar pattern.
-
-![Meta](Images/Final_Dashboard Visuals/Updated_Meta.png)
 
 
 ## Recommendations
