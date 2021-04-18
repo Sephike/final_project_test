@@ -119,7 +119,9 @@ For our [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_
 
 
 ### Sales Tab
-In the Sales tab, users can use the 'Region' filter to view respective video game sales trends for that specific region. 
+In the Sales tab, users can use the 'Region' filter to view respective video game sales trends for that specific region. Image below:
+
+![Sales_Page](Images/Final_Dashboard Visuals/Sales_Page.png)
 
 
 One of our key questions in this analysis was looking to evaluate if ESRB or Genre were top drivers in North American Sales. Below is a heatmap of Genre and ESRB ratings with North American sales. As you can see, there appears to be no strong relationship or indication that either drive North American sales. However, it's interesting to note that 'Racing' genre games rated 'E' appear to be the most successful category of game sold in North America.
@@ -130,6 +132,7 @@ One of our key questions in this analysis was looking to evaluate if ESRB or Gen
 ### Metascore Tab
 Once users have navigated to the Metascore tab, they can see a variety of views such as the top genre by Metascore, what are the top 'N' games by metascore and Sales, and understanding the relationship between Userscore and Metascore. The last visual is addressing one of our key questions around understanding the correlation between Userscore and Metascore. Based on the visual, there is a positive correlation between Metascore and Userscore. Meaning, as Metascore rises, Userscore follows a similar pattern.
 
+![Meta_Page](Images/Final_Dashboard Visuals/Updated_Meta.png)
 
 ## Recommendations
 Looking at the accuracy of the models, the linear regression models had good mean squared error but a poor variance score. Because looking at two variables is limiting, using the random forest regressor and XGBoost added in ESRB rating and Genre expanded the model. Due to the low accuracy of the random forest model and XGBoost, it is recommended to add more columns such as: budget for games, developement time, and number of QA testing. In the data cleaning phase, more columns of data would allow for more experimenting, like dropping columns which could greatly improve accuarcy.
