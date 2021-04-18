@@ -115,6 +115,9 @@ To build a more predictive model for video game sales, we would switch out ESRB 
 
 For our [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final_4112021/LandingPage), we incorporated a design/theme to the tool. We designed it for video game developers to use and gain insight on (1) Understanding trend video game sales across different region and if ESRB or Genre have an correlation to Sales (2) What is the correlation to User and Metascore. While using the tool, there is a variety of functionality/interactions available for the user. The user can choose to navigate to either the 'Sales' tab or 'Metascore' tab to begin using the dashboard.
 
+![Landing_page](Images/Final_Dashboard Visuals/Landing_Page.png)
+
+
 ### Sales Tab
 In the Sales tab, users can use the 'Region' filter to view respective video game sales trends for that specific region. 
 
