@@ -135,9 +135,6 @@ In the Sales tab, users can use the 'Region' filter to view respective video gam
 One of the key questions in this analysis was looking to evaluate if ESRB or Genre were top drivers in North American Sales. Below is a heatmap of Genre and ESRB ratings with North American sales. As you can see, there appears to be no strong relationship or indication that either drive North American sales. However, it is interesting to note that 'Racing' genre games rated 'E' appear to be the most successful category of game sold in North America.
 
 
-
-One of our key questions in this analysis was looking to evaluate if ESRB or Genre were top drivers in North American Sales. Below is a heatmap of Genre and ESRB ratings with North American sales. As you can see, there appears to be no strong relationship or indication that either drive North American sales. However, it's interesting to note that 'Racing' genre games rated 'E' appear to be the most successful category of game sold in North America.
-
 ![NA_Genre](Images/Final_Dashboard_Visuals/NA_Genre_ESRB.png)
 
 
