@@ -65,6 +65,12 @@ The Genre and ESRB ratings columns were converted to the categorical column with
 - A pairplot was created using the seaborn library to show the correlation of each columns. 
 ![Machine Learning Model 2](https://github.com/Sephike/predict_user_score/blob/main/Images/Machine_Learning_Model_2.png)
 
+![Correlation Between Metascore and Userscore](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/Correlation_User_Meta.png)
+
+![Genre and ESRB Ratings vs Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/Genre_ESRB_NA_Sales.png)
+
+![Metascore and NA Sales](https://github.com/Sephike/predict_user_score/blob/main/Images/Initial_Analyses_Images/MetaScore_NA_Sales.png)
+
 ### Model Choice
 The desired output for the model was a number, making a regression model the best fit. After exploring several linear regression models based on different variables, the two models that gave the most interesting results are listed below. In the early phase, linear regression was a quick way to test different variables against each other. Using a more complex machine learning model, the next model explored was the Random Forest Regressor and XGBoost.
 
@@ -111,31 +117,29 @@ Additional columns of data are needed to explore other factors that contribute t
 
 The [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final_4112021/LandingPage) was designed with a consistent theme to the tool. The dashboard is intended for video game developers to use and gain insight on (1) Understanding trend video game sales across different regions and if the ESRB Ratings or Genres have a correlation to Sales (2) What is the correlation between the Userscore and the Metascore. While using the tool, there are a variety of interactive tools available for the user. The user can choose to navigate to either the 'Sales' tab or 'Metascore' tab to begin using the dashboard.
 
-<<<<<<< HEAD
+
 ![Landing_Page](Images/Final_Dashboard_Visuals/Landing_Page.png)
-=======
+
 For our [dashboard](https://public.tableau.com/profile/andrew.nuss#!/vizhome/UT_Austin_VG_Dashboard_Final_4112021/LandingPage), we incorporated a design/theme to the tool. We designed it for video game developers to use and gain insight on (1) Understanding trend video game sales across different region and if ESRB or Genre have an correlation to Sales (2) What is the correlation to User and Metascore. While using the tool, there is a variety of functionality/interactions available for the user. The user can choose to navigate to either the 'Sales' tab or 'Metascore' tab to begin using the dashboard.
 
 ![Landing_Page](Images/Final_Dashboard_Visuals/Landing_Page.png)
 
->>>>>>> af034f2d2edf9dcb5b868c650c96dd713369e45d
+
 
 ### Sales Tab
 In the Sales tab, users can use the 'Region' filter to view respective video game sales trends for that specific region. Image below:
 
 ![Sales_Page](Images/Final_Dashboard_Visuals/Sales_Page.png)
-<<<<<<< HEAD
+
 
 One of the key questions in this analysis was looking to evaluate if ESRB or Genre were top drivers in North American Sales. Below is a heatmap of Genre and ESRB ratings with North American sales. As you can see, there appears to be no strong relationship or indication that either drive North American sales. However, it is interesting to note that 'Racing' genre games rated 'E' appear to be the most successful category of game sold in North America.
-=======
+
 
 
 One of our key questions in this analysis was looking to evaluate if ESRB or Genre were top drivers in North American Sales. Below is a heatmap of Genre and ESRB ratings with North American sales. As you can see, there appears to be no strong relationship or indication that either drive North American sales. However, it's interesting to note that 'Racing' genre games rated 'E' appear to be the most successful category of game sold in North America.
 
 ![NA_Genre](Images/Final_Dashboard_Visuals/NA_Genre_ESRB.png)
->>>>>>> af034f2d2edf9dcb5b868c650c96dd713369e45d
 
-![NA_Genre](Images/Final_Dashboard_Visuals/NA_Genre_ESRB.png)
 
 ### Metascore Tab
 Once users have navigated to the Metascore tab, they can see a variety of views such as the top genre by Metascore, what are the top 'N' games by metascore and Sales and understanding the relationship between Userscore and Metascore. The last visual is addressing one of the key questions around understanding the correlation between Userscore and Metascore. Based on the visual, there is a positive correlation between Metascore and Userscore. Meaning, as Metascore rises, Userscore follows a similar pattern.
